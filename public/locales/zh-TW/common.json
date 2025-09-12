@@ -5,74 +5,225 @@
   },
   "personalInfo": {
     "name": "CHING-HUAN LI",
-    "nickname": "Septem",
-    "title": "[Your Title, e.g., Front-end Engineer]",
-    "email": "Email",
-    "linkedin": "LinkedIn",
-    "github": "GitHub",
-    "website": "Website",
-    "summary": "[A brief introduction about yourself, e.g., your professional field, passion, career goals, etc.]"
+    "nickname": "Septem Li",
+    "title": "資深後端工程師",
+    "avatarUrl": "https://github.com/septemhill/resume-page/blob/main/public/avatar.jpg?raw=true",
+    "email": "septemhill@gmail.com",
+    "phone": "電話",
+    "linkedin": "https://www.linkedin.com/in/septem-li-7bb9a128/",
+    "github": "https://github.com/septemhill",
+    "website": "個人部落格"
   },
   "summary": {
-    "title": "Summary",
-    "content": ""
+    "title": "個人簡介",
+    "items": [
+      {
+        "title": "雲端服務",
+        "description": "熟悉 AWS 雲端服務，包含 S3、SQS、DynamoDB。"
+      },
+      {
+        "title": "後端開發",
+        "description": "熟悉 Go 語言後端框架，如 gin、go-kit、mux、gorm，以及測試框架 go-sqlmock 和 testify。"
+      },
+      {
+        "title": "監控與日誌系統",
+        "description": "熟悉使用 Prometheus 進行監控及 ElasticSearch 建立日誌系統。"
+      },
+      {
+        "title": "測試與品質保證",
+        "description": "具備豐富的單元測試經驗，並對測試工具與實踐有深入的了解。"
+      },
+      {
+        "title": "API 開發",
+        "description": "擁有建構 RESTful API 及 gRPC 傳輸層的經驗。"
+      },
+      {
+        "title": "資料庫與快取",
+        "description": "精通 Apache Kafka、Redis 及關聯式資料庫管理系統 (RDBMS)。"
+      },
+      {
+        "title": "應用程式整合",
+        "description": "具備 Slack bot 開發經驗，能夠整合多樣化的應用場景。"
+      }
+    ]
   },
   "toast": {
     "copied": "已將 {{item}} 複製到剪貼簿！",
     "copyFailed": "複製失敗。",
-    "copyNotSupported": "您的瀏覽器或當前環境不支援複製功能。"
+    "copyNotSupported": "您的瀏覽器或當前環境不支援複製功能。",
+    "phoneCopyNotSupported": "電話號碼無法複製，請手動加入。"
   },
   "workExperience": {
-    "title": "Work Experience",
+    "title": "工作經歷",
     "jobs": [
       {
-        "title": "資深前端工程師",
-        "company": "[Company Name 1]",
-        "position": "[Your Position 1]",
-        "date": "[Start Date] - [End Date]",
+        "title": "資深後端工程師",
+        "company": "RockX (AltStake)",
+        "position": "資深後端工程師",
+        "date": "2024/12 - 至今",
         "responsibilities": [
-          "[Your main responsibility or achievement 1 in this position]",
-          "[Your main responsibility or achievement 2 in this position]",
-          "[Your main responsibility or achievement 3 in this position]"
+          "設計並實現 Slack bot 指令以自動化工作流程並提供即時服務警報，提升營運效率和問題反應時間。",
+          "開發並維護 RESTful API，以實現與鏈上智能合約的無縫互動，從而能夠可靠地存取區塊鏈數據並增強系統整合。"
+        ]
+      },
+      {
+        "title": "資深後端工程師 (合約)",
+        "company": "A5 Labs, Fusang",
+        "position": "資深後端工程師 (約聘)",
+        "date": "2023/08 - 2024/06",
+        "responsibilities": [
+          "將第三方小遊戲整合至我們的平台。",
+          "開發 Slack bot 以接收斜線指令並與基礎設施整合。",
+          "引入程式碼覆蓋率、程式碼檢查器和格式化工具，以提高程式碼品質，並確保每個服務的程式碼覆蓋率超過特定值。",
+          "將新建立和現有的服務進行 Docker 化。",
+          "將專案從 Go 1.14.12 遷移到 Go 1.21.2。移除多餘、未使用的模組以改善程式碼的整潔度。",
+          "逐步整理單體式服務，並劃分出數個微服務。",
+          "設計活動系統，包含事件、任務和獎勵兌換模組。",
+          "識別並緩解 REST API 中的一個關鍵瓶頸，使響應時間改善了 62%。",
+          "將訊息代理系統從 RabbitMQ 遷移到 Redpanda。",
+          "為平台開發了全面的 Go 整合與壓力測試。"
+        ]
+      },
+      {
+        "title": "資深後端工程師",
+        "company": "幣安",
+        "position": "資深後端工程師",
+        "date": "2021/11 - 2023/07",
+        "responsibilities": [
+          "透過將資料分組以減少 45% 的 Redis 指令並引入記憶體內快取機制，將 Redis CPU 使用率從 65% 降低到 30%。",
+          "優化程式碼大小 25% - 30% 並提升程式碼品質。同時將程式碼覆蓋率從 72% 提高到 90%。",
+          "使用 truss 和 mockery 代碼生成工具創建服務模板和模擬測試模板。"
+        ]
+      },
+      {
+        "title": "資深後端工程師",
+        "company": "PhotoGrid",
+        "position": "資深後端工程師",
+        "date": "2021/06 - 2021/10",
+        "responsibilities": [
+          "使用 MVC 模型重構現有程式碼庫並提升程式碼品質。",
+          "引入程式碼品質靜態檢查器 (golangci-lint)。同時將常見漏洞和披露檢查器 (nancy) 引入 CI。",
+          "引入 Hashicorp Vault 將金鑰、密鑰與程式碼庫分離。",
+          "使用 ELK 分析 RESTful API 的執行時間，並將指定 API 的響應時間減少 20%。"
+        ]
+      },
+      {
+        "title": "資深後端工程師",
+        "company": "TrueTel (訊真科技)",
+        "position": "資深後端工程師",
+        "date": "2019/07 - 2021/05",
+        "responsibilities": [
+          "透過 JIRA 和 Slack 與 Nauto 雲端團隊合作。建立微服務，遷移具有兩種版本 JSON 資料格式的 RESTful API。同時建立資料記錄變更歷史 API 和 RDBMS (PostgreSQL) 資料遷移。",
+          "為 Google MTBF、CUJ (關鍵使用者旅程) 測試在不同 Chromebook 型號上開發多種使用者情境，並使用 EFK 建立日誌分析系統。同時使用 Grafana、Prometheus 監控目標裝置的 CPU、記憶體和網路頻寬。",
+          "設計一個伺服器資源調度器，為包含 1 到 3 個 Chrome 實例的服務分配伺服器，這些實例可透過 CDP (Chrome 開發者工具協議) 進行通訊，以建立大量機器人參與的 Zoom 會議。並提供 gRPC 和 RESTful 介面供存取。",
+          "為 Chromium 開源專案貢獻 CUJ 情境案例和框架變更，包含 tast 和 tast-tests 儲存庫。"
+        ]
+      },
+      {
+        "title": "區塊鏈工程師",
+        "company": "IOEX",
+        "position": "區塊鏈工程師",
+        "date": "2018/09 - 2019/06",
+        "responsibilities": [
+          "使用 Solidity 進行以太坊智能合約開發。",
+          "將 DPoS 共識機制移植到 Elastos、以太坊。",
+          "將交易收集到資料庫中，並為區塊鏈瀏覽器實現 RESTful API。",
+          "實現用於區塊鏈壓力測試的自動交易生成工具。"
         ]
       },
       {
         "title": "前端工程師",
-        "company": "[Company Name 2]",
-        "position": "[Your Position 2]",
-        "date": "[Start Date] - [End Date]",
+        "company": "Retair",
+        "position": "前端工程師",
+        "date": "2017/05 - 2018/08",
         "responsibilities": [
-          "[Responsibility or achievement A]",
-          "[Responsibility or achievement B]"
+          "在 Web 應用程式開發中使用 AngularJS 和 jQuery 框架。",
+          "具備使用 RESTful Web 服務的經驗。",
+          "使用 ECharts、C3 函式庫渲染視覺化圖表。",
+          "使用 JIRA 軟體在每日會議中溝通更新。",
+          "使用 i18n 函式庫提供多語言支援。",
+          "跨瀏覽器測試/實作。",
+          "開發 UI 元件。",
+          "重構現有程式碼，增強並改善整體程式碼品質。"
+        ]
+      },
+      {
+        "title": "資深韌體工程師",
+        "company": "PEGATRON (和碩聯合科技)",
+        "position": "資深韌體工程師",
+        "date": "2012/04 - 2017/04",
+        "responsibilities": [
+          "JBOD 和伺服器的軟體設計。",
+          "與跨職能團隊（包括 EE、Power、QTR、QTC 和製造端）進行橋接和協調。",
+          "除錯和功能驗證。",
+          "使用 ASPEED AST2300/AST2400/AST2500/PILOT-4 晶片開發 BMC。熟悉 AMI 程式碼庫。",
+          "使用 Trac 專案管理工具。"
         ]
       }
     ]
   },
   "projects": {
-    "title": "Projects",
-    "projectName": "[Project Name]",
-    "techUsed": "Technologies Used:",
-    "techStack": "[Tech 1, Tech 2, Tech 3]",
-    "description": "[A brief description of the project, explaining its goal and your role.]",
-    "contributions": [
-      "[Your contribution or feature implemented 1 in this project]",
-      "[Your contribution or feature implemented 2 in this project]"
+    "title": "個人專案",
+    "items": [
+      {
+        "name": "goastutil",
+        "techStack": "Go",
+        "description": "一個基於 AST (抽象語法樹) 的 Golang 原始碼生成工具。",
+        "githubUrl": "https://github.com/septemhill/goastutil"
+      },
+      {
+        "name": "rh_xqr_dte (AI 驅動)",
+        "techStack": "Next.js, TypeScript, Tailwind CSS, Gemini AI",
+        "description": "一個用於追蹤 RoundhillE ETFs 和 YieldMax ETFs 的 0DTE ETF 價格與股息資訊的儀表板。",
+        "projectUrl": "https://rh-xqr-dte.pages.dev/",
+        "githubUrl": "https://github.com/septemhill/rh_xqr_dte"
+      },
+      {
+        "name": "alpha_vantage_mcp (AI 驅動)",
+        "techStack": "TypeScript, Gemini AI",
+        "description": "MCP 伺服器提供從 Alpha Vantage 存取金融數據的功能。它包含檢索 OHLCV 數據、股息數據和 ETF 持股數據的工具。",
+        "githubUrl": "https://github.com/septemhill/alpha_vantage_mcp"
+      }
     ],
-    "projectLink": "Project Link",
-    "githubRepo": "GitHub Repo"
+    "projectLink": "專案連結",
+    "githubRepo": "GitHub 倉庫"
+  },
+  "skills": {
+    "title": "專業技能",
+    "categories": [
+      {
+        "name": "工具",
+        "items": [
+          { "name": "Go", "level": 90 },
+          { "name": "C", "level": 90 },
+          { "name": "Git", "level": 90 },
+          { "name": "Docker", "level": 70 },
+          { "name": "TypeScript", "level": 60 },
+          { "name": "Kubernetes", "level": 40 }
+        ]
+      },
+      {
+        "name": "後端",
+        "items": [
+          { "name": "gRPC", "level": 80 },
+          { "name": "微服務", "level": 80 },
+          { "name": "RESTful APIs", "level": 80 }
+        ]
+      }
+    ]
   },
   "education": {
     "title": "學歷",
     "items": [
       {
-        "school": "[學校名稱 1]",
-        "date": "[開始日期] - [結束日期]",
-        "degree": "[你的學位] - [你的主修]"
+        "school": "國立中正大學",
+        "date": "2010/02 - 2012/02",
+        "degree": "資訊工程研究所 碩士"
       },
       {
-        "school": "[學校名稱 2]",
-        "date": "[開始日期] - [結束日期]",
-        "degree": "[你的學位] - [你的主修]"
+        "school": "國立聯合大學",
+        "date": "2006/09 - 2010/01",
+        "degree": "資訊工程學系 學士"
       }
     ]
   }

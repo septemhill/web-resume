@@ -1,5 +1,13 @@
 import { useTranslation } from "next-i18next";
 
+// 從 i18n JSON 檔案讀取的原始資料結構
+interface JobData {
+  title: string;
+  company: string;
+  position: string;
+  date: string;
+  responsibilities: string[];
+}
 interface JobProps {
   company: string;
   title: string; // 新增的職位標題
@@ -35,7 +43,7 @@ const WorkExperience = () => {
 
   const jobs: JobProps[] =
     jobsData.length > 0
-      ? jobsData.map((job: any) => ({
+      ? jobsData.map((job: JobData) => ({
           title: job.title,
           company: job.company,
           position: job.position,

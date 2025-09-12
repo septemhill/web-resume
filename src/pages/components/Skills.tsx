@@ -5,6 +5,11 @@ interface SkillProps {
   level: number; // 0-100
 }
 
+interface SkillCategoryProps {
+  name: string;
+  items: SkillProps[];
+}
+
 const SkillBar: React.FC<SkillProps> = ({ name, level }) => {
   return (
     <div className="mb-4">
@@ -25,16 +30,23 @@ const SkillBar: React.FC<SkillProps> = ({ name, level }) => {
 const Skills = () => {
   const { t } = useTranslation("common");
 
-  const skillsData = t("skills.items", { returnObjects: true }) as SkillProps[] | undefined;
+  const skillCategories = t("skills.categories", { returnObjects: true }) as SkillCategoryProps[] | undefined;
 
-  const skills = Array.isArray(skillsData) ? skillsData : [];
+  const categories = Array.isArray(skillCategories) ? skillCategories : [];
 
   return (
     <section id="skills">
       <h2 className="text-2xl font-bold mb-4 border-b-2 pb-2">{t("skills.title")}</h2>
-      {skills.map((skill) => (
-        <SkillBar key={skill.name} name={skill.name} level={skill.level} />
-      ))}
+      <div className="space-y-6">
+        {categories.map((category) => (
+          <div key={category.name}>
+            <h3 className="text-lg font-semibold mb-2">{category.name}</h3>
+            {category.items.map((skill) => (
+              <SkillBar key={skill.name} name={skill.name} level={skill.level} />
+            ))}
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

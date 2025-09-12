@@ -5,84 +5,226 @@
   },
   "personalInfo": {
     "name": "CHING-HUAN LI",
-    "nickname": "Septem",
-    "title": "[Your Title, e.g., Front-end Engineer]",
-    "email": "Email",
-    "linkedin": "LinkedIn",
-    "github": "GitHub",
-    "website": "Website",
-    "summary": "[A brief introduction about yourself, e.g., your professional field, passion, career goals, etc.]"
+    "nickname": "Septem Li",
+    "title": "Senior Frontend Developer",
+    "avatarUrl": "https://github.com/septemhill/resume-page/blob/main/public/avatar.jpg?raw=true",
+    "email": "septemhill@gmail.com",
+    "phone": "Phone",
+    "linkedin": "https://www.linkedin.com/in/septem-li-7bb9a128/",
+    "github": "https://github.com/septemhill",
+    "website": "Blog"
   },
   "summary": {
     "title": "Summary",
-    "content": "[A brief introduction about yourself, e.g., your professional field, passion, career goals, etc.]"
+    "items": [
+      {
+        "title": "Cloud Service",
+        "description": "Experienced in AWS, includes S3, SQS, DynamoDB services."
+      },
+      {
+        "title": "Backend Development",
+        "description": "Familiar with gin, go-kit, mux, gorm, go-sqlmock and testify frameworks."
+      },
+      {
+        "title": "Monitoring and Logging Systems",
+        "description": "Familiar with monitoring (Prometheus) and logging system (ElasticSearch)."
+      },
+      {
+        "title": "Testing and Quality Assurance",
+        "description": "Strong experience in unit testing with a good understanding of testing tools and practices."
+      },
+      {
+        "title": "API Development",
+        "description": "Experienced in building RESTful APIs and gRPC transport layers."
+      },
+      {
+        "title": "Database and Cache",
+        "description": "Proficient in Apache Kafka, Redis, and Relational Database Management Systems (RDBMS)."
+      },
+      {
+        "title": "Application Integration",
+        "description": "Experienced in Slack bot development, capable of integrating diverse application scenarios."
+      }
+    ]
   },
   "toast": {
     "copied": "Copied {{item}} to clipboard!",
     "copyFailed": "Failed to copy.",
-    "copyNotSupported": "Copying is not supported in this browser or context."
+    "copyNotSupported": "Copying is not supported in this browser or context.",
+    "phoneCopyNotSupported": "Phone number cannot be copied, please add manually."
   },
   "workExperience": {
     "title": "Work Experience",
     "jobs": [
       {
-        "title": "Senior Frontend Developer",
-        "company": "[Company Name 1]",
-        "position": "[Your Position 1]",
-        "date": "[Start Date] - [End Date]",
+        "title": "Senior Backend Developer",
+        "company": "RockX (AltStake)",
+        "position": "Senior Backend Developer",
+        "date": "Dec 2024 - Present",
         "responsibilities": [
-          "[Your main responsibility or achievement 1 in this position]",
-          "[Your main responsibility or achievement 2 in this position]",
-          "[Your main responsibility or achievement 3 in this position]"
+          "Designed and implemented Slack bot commands to automate workflows and deliver real-time service alerts, improving operational efficiency and issue response time.",
+          "Developed and maintained RESTful APIs for seamless interaction with on-chain smart contracts, enabling reliable access to blockchain data and enhancing system integration."
+        ]
+      },
+      {
+        "title": "Senior Backend Developer (Contractor)",
+        "company": "A5 Labs, Fusang",
+        "position": "Senior Backend Developer (Contractor)",
+        "date": "Aug 2023 - June 2024",
+        "responsibilities": [
+          "Integrated third-party mini-games into our platform.",
+          "Developed Slack bot to receive slash command and integrated with infrastructures.",
+          "Introduced code coverage, code linters and formatter to increase code quality and also make sure the code coverage rate over specific value for each service.",
+          "Dockerize new creation and existing services",
+          "Migrated projects from Go 1.14.12 to Go 1.21.2. Removed redundant, unused modules to improve code hygiene.",
+          "Gradually organize the monolith service and carve out several microservices.",
+          "Design campaign system, includes event, mission and reward redeem modules.",
+          "Identified and mitigated a critical bottleneck in the REST API, which improved 62% response time.",
+          "Migrated message broker system from RabbitMQ to Redpanda.",
+          "Developed comprehensive integration and stress testing in Go for the platform."
+        ]
+      },
+      {
+        "title": "Senior Backend Developer",
+        "company": "Binance",
+        "position": "Senior Backend Developer",
+        "date": "Nov 2021 - Jul 2023",
+        "responsibilities": [
+          "Reduced Redis CPU utilization from 65% to 30% by grouping data to reduce 45% Redis commands and introducing in-memory cache mechanism.",
+          "Optimised code size 25% - 30% and improving the code quality. Also increased code coverage rate from 72% to 90%.",
+          "Used truss and mockery codegen tool created services template and mock testing template.",
+          ""
+        ]
+      },
+      {
+        "title": "Senior Backend Developer",
+        "company": "PhotoGrid",
+        "position": "Senior Backend Developer",
+        "date": "Jun 2021 - Oct 2021",
+        "responsibilities": [
+          "Refactor existed codebase with MVC model and improving the code quality.",
+          "Introduce code quality static checker (golangci-lint). Also introducing Common Vulnerabilities and Exposures checker (nancy) into CI.",
+          "Introduce Hashicorp Vault to separate the keys, secrets out of codebase.",
+          "Profile the RESTful APIs execution time with ELK and reduce the 20% response time with specified APIs."
+        ]
+      },
+      {
+        "title": "Senior Backend Developer",
+        "company": "TrueTel",
+        "position": "Senior Backend Developer ",
+        "date": "Jul 2019 - May 2021",
+        "responsibilities": [
+          "Collaborating with Nauto cloud team via JIRA and Slack. Building micro-services, migrating RESTful APIs which with two versions JSON data format. Also built data record changes history APIs and RDBMS (PostgreSQL) data migration.",
+          "Developing several user scenarios for Google MTBF, CUJ (Critical User Journey) testing on different Chromebook models and build log analysis system with EFK. Also using Grafana, Prometheus monitors the target devices CPU, memory and network bandwidth.",
+          "Designing a server resource dispatcher which dispatch the server for service contains 1 to 3 Chrome instances that could communicate via CDP (Chrome Devtools Protocol) to build Zoom conferences with a lot of bots. And providing gRPC and RESTful interface for accessing.",
+          "Contributing CUJ scenario cases and framework changes to Chromium open source project, includes tast and tast-tests repositories."
+        ]
+      },
+      {
+        "title": "Blockchain Developer",
+        "company": "IOEX",
+        "position": "Blockchain Developer",
+        "date": "Sep 2018 - Jun 2019",
+        "responsibilities": [
+          "Ethereum smart contract development with Solidity.",
+          "Transplant DPoS consensus into Elastos, Ethereum.",
+          "Collecting transactions into database and implements RESTful APIs for Blockchain Explorer.",
+          "Implements auto-transaction generator tool for blockchain pressure testing."
         ]
       },
       {
         "title": "Frontend Developer",
-        "company": "[Company Name 2]",
-        "position": "[Your Position 2]",
-        "date": "[Start Date] - [End Date]",
+        "company": "Retair",
+        "position": "Frontend Developer",
+        "date": "May 2017 - Aug 2018",
         "responsibilities": [
-          "[Responsibility or achievement A]",
-          "[Responsibility or achievement B]"
+          "Used AngularJS and jQuery frameworks in the development of web applications.",
+          "Experience with consuming RESTful web services.",
+          "Rendered visualization charts with ECharts, C3 libraries.",
+          "Communicated updates in daily meeting using JIRA software.",
+          "Provided multi-language support using i18n library.",
+          "Cross-browser testing / implementation.",
+          "Developed UI components.",
+          "Refactor existing code, enhancements and improvements overall code quality."
+        ]
+      },
+      {
+        "title": "Senior Firmware Developer",
+        "company": "PEGATRON",
+        "position": "Senior Firmware Developer",
+        "date": "Apr 2012 - Apr 2017",
+        "responsibilities": [
+          "Software design for JBOD and Server.",
+          "Bridge and coordinate with cross-function teams, including EE, Power, QTR, QTC and Manufacturing side.",
+          "Debugging and function verification.",
+          "Develop BMC with ASPEED AST2300/AST2400/AST2500/PILOT-4 chips. Familiar with AMI code base.",
+          "Working with Trac project management."
         ]
       }
     ]
   },
   "projects": {
     "title": "Projects",
-    "projectName": "[Project Name]",
-    "techUsed": "Technologies Used:",
-    "techStack": "[Tech 1, Tech 2, Tech 3]",
-    "description": "[A brief description of the project, explaining its goal and your role.]",
-    "contributions": [
-      "[Your contribution or feature implemented 1 in this project]",
-      "[Your contribution or feature implemented 2 in this project]"
+    "items": [
+      {
+        "name": "goastutil",
+        "techStack": "Go",
+        "description": "A Golang source-to-source code generator tool from AST (Abstract Syntax Tree)",
+        "githubUrl": "https://github.com/septemhill/goastutil"
+      },
+      {
+        "name": "rh_xqr_dte (AI-Powered)",
+        "techStack": "Next.js, TypeScript, Tailwind CSS, Gemini AI",
+        "description": "A dashboard for tracking the 0DTE ETFs price and dividend information of RoundhillE ETFs and YieldMax ETFs.",
+        "projectUrl": "https://rh-xqr-dte.pages.dev/",
+        "githubUrl": "https://github.com/septemhill/rh_xqr_dte"
+      },
+      {
+        "name": "alpha_vantage_mcp (AI-Powered)",
+        "techStack": "TypeScript, Gemini AI",
+        "description": "MCP server provides access to financial data from Alpha Vantage. It includes tools to retrieve OHLCV data, dividend data, and ETF holdings data.",
+        "githubUrl": "https://github.com/septemhill/alpha_vantage_mcp"
+      }
     ],
     "projectLink": "Project Link",
     "githubRepo": "GitHub Repo"
   },
   "skills": {
     "title": "Skills",
-    "items": [
-      { "name": "React", "level": 90 },
-      { "name": "TypeScript", "level": 85 },
-      { "name": "Next.js", "level": 80 },
-      { "name": "Tailwind CSS", "level": 95 },
-      { "name": "Node.js", "level": 70 }
+    "categories": [
+      {
+        "name": "Tools",
+        "items": [
+          { "name": "Go", "level": 90 },
+          { "name": "C", "level": 90 },
+          { "name": "Git", "level": 90 },
+          { "name": "Docker", "level": 70 },
+          { "name": "TypeScript", "level": 60 },
+          { "name": "Kubernetes", "level": 40 }
+        ]
+      },
+      {
+        "name": "Backend",
+        "items": [
+          { "name": "gRPC", "level": 80 },
+          { "name": "Micro Services", "level": 80 },
+          { "name": "RESTful APIs", "level": 80 }
+        ]
+      }
     ]
   },
   "education": {
     "title": "Education",
     "items": [
       {
-        "school": "[School Name 1]",
-        "date": "[Start Date] - [End Date]",
-        "degree": "[Your Degree] - [Your Major]"
+        "school": "National Chung Cheng University",
+        "date": "Feb 2010 - Feb 2012",
+        "degree": "Master of Computer Science"
       },
       {
-        "school": "[School Name 2]",
-        "date": "[Start Date] - [End Date]",
-        "degree": "[Your Degree] - [Your Major]"
+        "school": "National United University",
+        "date": "Sep 2006 - Jan 2010",
+        "degree": "Bachelor of Computer Science "
       }
     ]
   }
