@@ -71,7 +71,7 @@ const PersonalInfo = () => {
       id: "email",
       label: t("personalInfo.email"),
       url: "mailto:ching.huan.li@gmail.com",
-      copyValue: "ching.huan.li@gmail.com",
+      copyValue: "septemhill@gmail.com",
       icon: <MailIcon className="h-6 w-6" />,
     },
     // {
@@ -84,15 +84,15 @@ const PersonalInfo = () => {
     {
       id: "linkedin",
       label: t("personalInfo.linkedin"),
-      url: "https://linkedin.com/in/septem-li",
-      copyValue: "https://linkedin.com/in/septem-li",
+      url: "https://www.linkedin.com/in/septem-li-7bb9a128/",
+      copyValue: "https://www.linkedin.com/in/septem-li-7bb9a128/",
       icon: <LinkedInIcon className="h-6 w-6" />,
     },
     {
       id: "github",
       label: t("personalInfo.github"),
-      url: "https://github.com/septem-li",
-      copyValue: "https://github.com/septem-li",
+      url: "https://github.com/septemhill",
+      copyValue: "https://github.com/septemhill",
       icon: <GitHubIcon className="h-6 w-6" />,
     },
     // {
