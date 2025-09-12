@@ -19,10 +19,10 @@ interface JobProps {
 const Job: React.FC<JobProps> = ({ company, title, position, period, duties }) => {
   return (
     <div>
-      <h3 className="text-xl font-semibold">{company}</h3>
-      <p className="text-md text-gray-800">{`${position}`}</p>
+      <h3 className="text-xl font-semibold">{title}</h3>
+      <p className="text-md text-gray-800">{`${company} - ${position}`}</p>
       <p className="text-sm text-gray-600 mt-1">{period}</p>
-      <ul className="list-disc list-inside mt-2 space-y-1">
+      <ul className="list-disc list-outside pl-5 mt-2 space-y-1">
         {duties.map((duty, index) => (
           <li key={index}>{duty}</li>
         ))}
