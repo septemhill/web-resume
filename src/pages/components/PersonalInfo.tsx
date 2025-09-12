@@ -77,7 +77,8 @@ const PersonalInfo = () => {
   return (
     <section id="personal-info" className="text-center">
       <h1 className="text-4xl font-bold mb-2">{t("personalInfo.name")}</h1>
-      <p className="text-lg text-gray-700 mb-4">{t("personalInfo.title")}</p>
+      {/* <p className="text-lg text-gray-700 mb-4">{t("personalInfo.title")}</p> */}
+      <p className="text-lg text-gray-700 mb-4">{t("personalInfo.nickname")}</p>
       <div className="flex justify-center gap-6 mb-4">
         {socialLinks.map((link) => (
           <a

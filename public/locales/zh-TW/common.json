@@ -1,10 +1,11 @@
 {
   "language": {
     "switch_to_en": "English",
-    "switch_to_zh-TW": "繁體中文"
+    "switch_to_zh-TW": "中文"
   },
   "personalInfo": {
-    "name": "[Your Name]",
+    "name": "CHING-HUAN LI",
+    "nickname": "Septem",
     "title": "[Your Title, e.g., Front-end Engineer]",
     "email": "Email",
     "linkedin": "LinkedIn",
@@ -61,9 +62,18 @@
     "githubRepo": "GitHub Repo"
   },
   "education": {
-    "title": "Education",
-    "school": "[School Name]",
-    "date": "[Start Date] - [End Date]",
-    "degree": "[Your Degree] - [Your Major]"
+    "title": "學歷",
+    "items": [
+      {
+        "school": "[學校名稱 1]",
+        "date": "[開始日期] - [結束日期]",
+        "degree": "[你的學位] - [你的主修]"
+      },
+      {
+        "school": "[學校名稱 2]",
+        "date": "[開始日期] - [結束日期]",
+        "degree": "[你的學位] - [你的主修]"
+      }
+    ]
   }
 }

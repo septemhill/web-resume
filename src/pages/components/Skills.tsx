@@ -14,7 +14,7 @@ const SkillBar: React.FC<SkillProps> = ({ name, level }) => {
       </div>
       <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
         <div
-          className="bg-blue-600 h-2.5 rounded-full"
+          className="bg-gradient-to-r from-blue-500 to-cyan-400 h-2.5 rounded-full"
           style={{ width: `${level}%` }}
         ></div>
       </div>

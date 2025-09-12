@@ -21,10 +21,10 @@ export default function Home() {
     <div className="min-h-screen bg-gray-100 font-sans antialiased">
       <Toaster position="top-left" />
       <div className="container mx-auto flex max-w-4xl justify-end p-4 sm:p-8">
-        <button onClick={() => handleLocaleChange('en')} className={`px-2 py-1 ${router.locale === 'en' ? 'font-bold' : ''}`}>
+        <button onClick={() => handleLocaleChange('en')} className={`px-2 py-1 transition-colors ${router.locale === 'en' ? 'font-bold text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}>
           {t('language.switch_to_en')}
         </button>
-        <button onClick={() => handleLocaleChange('zh-TW')} className={`px-2 py-1 ${router.locale === 'zh-TW' ? 'font-bold' : ''}`}>
+        <button onClick={() => handleLocaleChange('zh-TW')} className={`px-2 py-1 transition-colors ${router.locale === 'zh-TW' ? 'font-bold text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}>
           {t('language.switch_to_zh-TW')}
         </button>
       </div>
