@@ -14,13 +14,26 @@
   },
   "workExperience": {
     "title": "Work Experience",
-    "company": "[Company Name]",
-    "position": "[Your Position]",
-    "date": "[Start Date] - [End Date]",
-    "responsibilities": [
-      "[Your main responsibility or achievement 1 in this position]",
-      "[Your main responsibility or achievement 2 in this position]",
-      "[Your main responsibility or achievement 3 in this position]"
+    "jobs": [
+      {
+        "company": "[Company Name 1]",
+        "position": "[Your Position 1]",
+        "date": "[Start Date] - [End Date]",
+        "responsibilities": [
+          "[Your main responsibility or achievement 1 in this position]",
+          "[Your main responsibility or achievement 2 in this position]",
+          "[Your main responsibility or achievement 3 in this position]"
+        ]
+      },
+      {
+        "company": "[Company Name 2]",
+        "position": "[Your Position 2]",
+        "date": "[Start Date] - [End Date]",
+        "responsibilities": [
+          "[Responsibility or achievement A]",
+          "[Responsibility or achievement B]"
+        ]
+      }
     ]
   },
   "projects": {

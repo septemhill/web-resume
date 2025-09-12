@@ -24,19 +24,22 @@ const Job: React.FC<JobProps> = ({ company, title, period, duties }) => {
 const WorkExperience = () => {
   const { t } = useTranslation("common");
 
-  // 從 i18n 檔案中讀取工作經歷資料
-  // 注意：t 函數的 { returnObjects: true } 選項可以取得整個物件或陣列
-  const jobData = t("workExperience", { returnObjects: true }) as any;
-  const jobs: JobProps[] = Array.isArray(jobData)
-    ? jobData
-    : [
-        {
-          company: jobData.company,
-          title: jobData.position,
-          period: jobData.date,
-          duties: jobData.responsibilities,
-        },
-      ];
+  // 從 i18n 檔案中讀取工作經歷陣列
+  // t 函數的 { returnObjects: true } 選項可以取得整個物件或陣列
+  const jobsOrJob = t("workExperience.jobs", { returnObjects: true });
+
+  // 確保 jobsData 永遠是陣列
+  const jobsData = Array.isArray(jobsOrJob) ? jobsOrJob : (typeof jobsOrJob === 'object' && jobsOrJob !== null ? [jobsOrJob] : []);
+
+  const jobs: JobProps[] =
+    jobsData.length > 0
+      ? jobsData.map((job: any) => ({
+          company: job.company,
+          title: job.position,
+          period: job.date,
+          duties: job.responsibilities,
+        }))
+      : [];
 
   return (
     <section id="work-experience">
