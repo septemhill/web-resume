@@ -12,6 +12,10 @@
     "website": "Website",
     "summary": "[A brief introduction about yourself, e.g., your professional field, passion, career goals, etc.]"
   },
+  "summary": {
+    "title": "Summary",
+    "content": ""
+  },
   "workExperience": {
     "title": "Work Experience",
     "jobs": [

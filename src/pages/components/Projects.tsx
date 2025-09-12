@@ -14,7 +14,7 @@ const Project: React.FC<ProjectProps> = ({ name, techStack, description, contrib
   return (
     <div>
       <h3 className="text-xl font-semibold">{name}</h3>
-      <p className="text-sm text-gray-600">
+      <p className="text-sm text-gray-700">
         <strong>{t("projects.techUsed")}</strong> {techStack}
       </p>
       <p className="mt-2">{description}</p>

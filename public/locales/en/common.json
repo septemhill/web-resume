@@ -12,11 +12,15 @@
     "website": "Website",
     "summary": "[A brief introduction about yourself, e.g., your professional field, passion, career goals, etc.]"
   },
+  "summary": {
+    "title": "個人簡介",
+    "content": "[一段關於你自己的簡短介紹，例如你的專業領域、熱情所在、職涯目標等。]"
+  },
   "workExperience": {
     "title": "Work Experience",
     "jobs": [
       {
-        "title": "Senior Backend Developer",
+        "title": "資深前端工程師",
         "company": "[Company Name 1]",
         "position": "[Your Position 1]",
         "date": "[Start Date] - [End Date]",
@@ -27,7 +31,7 @@
         ]
       },
       {
-        "title": "Backend Developer",
+        "title": "前端工程師",
         "company": "[Company Name 2]",
         "position": "[Your Position 2]",
         "date": "[Start Date] - [End Date]",

@@ -56,7 +56,7 @@ const PersonalInfo = () => {
   return (
     <section id="personal-info" className="text-center">
       <h1 className="text-4xl font-bold mb-2">{t("personalInfo.name")}</h1>
-      <p className="text-lg text-gray-600 mb-4">{t("personalInfo.title")}</p>
+      <p className="text-lg text-gray-700 mb-4">{t("personalInfo.title")}</p>
       <div className="flex justify-center gap-6 mb-4">
         {socialLinks.map((link, index) => (
           <a
@@ -65,13 +65,12 @@ const PersonalInfo = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={link.label}
-            className="text-gray-600 hover:text-blue-500 transition-colors"
+            className="text-gray-700 hover:text-blue-500 transition-colors"
           >
             {link.icon}
           </a>
         ))}
       </div>
-      <p className="max-w-2xl mx-auto">{t("personalInfo.summary")}</p>
     </section>
   );
 };

@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Education from "./components/Education";
 import PersonalInfo from "./components/PersonalInfo";
 import Projects from "./components/Projects";
+import Summary from "./components/Summary";
 import WorkExperience from "./components/WorkExperience";
 
 export default function Home() {
@@ -25,8 +26,9 @@ export default function Home() {
         </button>
       </div>
       <main className="container mx-auto max-w-4xl p-4 sm:p-8">
-        <div className="space-y-10 rounded-lg bg-white p-6 shadow-md sm:p-10">
+        <div className="space-y-10 rounded-lg bg-white p-6 shadow-md sm:p-10 text-gray-800">
           <PersonalInfo />
+          <Summary />
           <WorkExperience />
           <Projects />
           <Education />
