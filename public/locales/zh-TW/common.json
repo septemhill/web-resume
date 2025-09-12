@@ -16,6 +16,11 @@
     "title": "Summary",
     "content": ""
   },
+  "toast": {
+    "copied": "已將 {{item}} 複製到剪貼簿！",
+    "copyFailed": "複製失敗。",
+    "copyNotSupported": "您的瀏覽器或當前環境不支援複製功能。"
+  },
   "workExperience": {
     "title": "Work Experience",
     "jobs": [

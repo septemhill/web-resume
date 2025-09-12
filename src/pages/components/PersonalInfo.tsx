@@ -1,5 +1,6 @@
 import { useTranslation } from "next-i18next";
-import React from "react";
+import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 // --- Icon Components ---
 const MailIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -33,22 +34,42 @@ const GlobeIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 const PersonalInfo = () => {
   const { t } = useTranslation("common");
+  
+  const handleCopy = async (textToCopy: string, label: string) => {
+    // 檢查剪貼簿 API 是否可用
+    if (!navigator.clipboard) {
+      console.error("Clipboard API not available. This might be due to an insecure context (non-HTTPS).");
+      toast.error(t("toast.copyNotSupported"));
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+      toast.success(t("toast.copied", { item: label }));
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+      toast.error(t("toast.copyFailed"));
+    }
+  };
 
   // 將您的個人連結集中管理
   const socialLinks = [
     {
       label: t("personalInfo.email"),
       url: "mailto:[你的Email]",
+      copyValue: "[你的Email]",
       icon: <MailIcon className="h-6 w-6" />,
     },
     {
       label: t("personalInfo.linkedin"),
       url: "[你的LinkedIn]",
+      copyValue: "[你的LinkedIn]",
       icon: <LinkedInIcon className="h-6 w-6" />,
     },
     {
       label: t("personalInfo.github"),
       url: "[你的GitHub]",
+      copyValue: "[你的GitHub]",
       icon: <GitHubIcon className="h-6 w-6" />,
     },
   ];
@@ -58,14 +79,18 @@ const PersonalInfo = () => {
       <h1 className="text-4xl font-bold mb-2">{t("personalInfo.name")}</h1>
       <p className="text-lg text-gray-700 mb-4">{t("personalInfo.title")}</p>
       <div className="flex justify-center gap-6 mb-4">
-        {socialLinks.map((link, index) => (
+        {socialLinks.map((link) => (
           <a
-            key={index}
+            key={link.label}
             href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={(e) => {
+              e.preventDefault();
+              handleCopy(link.copyValue, link.label);
+            }}
+            // 讓使用者仍然可以透過右鍵或中鍵在新分頁開啟連結
+            onAuxClick={(e) => e.button === 1 && window.open(link.url, '_blank')}
             aria-label={link.label}
-            className="text-gray-700 hover:text-blue-500 transition-colors"
+            className="text-gray-700 hover:text-blue-500 transition-colors cursor-pointer"
           >
             {link.icon}
           </a>

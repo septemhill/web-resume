@@ -13,14 +13,19 @@
     "summary": "[A brief introduction about yourself, e.g., your professional field, passion, career goals, etc.]"
   },
   "summary": {
-    "title": "個人簡介",
-    "content": "[一段關於你自己的簡短介紹，例如你的專業領域、熱情所在、職涯目標等。]"
+    "title": "Summary",
+    "content": "[A brief introduction about yourself, e.g., your professional field, passion, career goals, etc.]"
+  },
+  "toast": {
+    "copied": "Copied {{item}} to clipboard!",
+    "copyFailed": "Failed to copy.",
+    "copyNotSupported": "Copying is not supported in this browser or context."
   },
   "workExperience": {
     "title": "Work Experience",
     "jobs": [
       {
-        "title": "資深前端工程師",
+        "title": "Senior Frontend Developer",
         "company": "[Company Name 1]",
         "position": "[Your Position 1]",
         "date": "[Start Date] - [End Date]",
@@ -31,7 +36,7 @@
         ]
       },
       {
-        "title": "前端工程師",
+        "title": "Frontend Developer",
         "company": "[Company Name 2]",
         "position": "[Your Position 2]",
         "date": "[Start Date] - [End Date]",
@@ -54,6 +59,16 @@
     ],
     "projectLink": "Project Link",
     "githubRepo": "GitHub Repo"
+  },
+  "skills": {
+    "title": "Skills",
+    "items": [
+      { "name": "React", "level": 90 },
+      { "name": "TypeScript", "level": 85 },
+      { "name": "Next.js", "level": 80 },
+      { "name": "Tailwind CSS", "level": 95 },
+      { "name": "Node.js", "level": 70 }
+    ]
   },
   "education": {
     "title": "Education",

@@ -1,10 +1,12 @@
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Toaster } from "react-hot-toast";
 import { useRouter } from "next/router";
 import Education from "./components/Education";
 import PersonalInfo from "./components/PersonalInfo";
 import Projects from "./components/Projects";
 import Summary from "./components/Summary";
+import Skills from "./components/Skills";
 import WorkExperience from "./components/WorkExperience";
 
 export default function Home() {
@@ -17,6 +19,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-100 font-sans antialiased">
+      <Toaster position="top-left" />
       <div className="container mx-auto flex max-w-4xl justify-end p-4 sm:p-8">
         <button onClick={() => handleLocaleChange('en')} className={`px-2 py-1 ${router.locale === 'en' ? 'font-bold' : ''}`}>
           {t('language.switch_to_en')}
@@ -30,6 +33,7 @@ export default function Home() {
           <PersonalInfo />
           <Summary />
           <WorkExperience />
+          <Skills />
           <Projects />
           <Education />
         </div>
