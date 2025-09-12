@@ -16,6 +16,7 @@
     "title": "Work Experience",
     "jobs": [
       {
+        "title": "資深前端工程師",
         "company": "[Company Name 1]",
         "position": "[Your Position 1]",
         "date": "[Start Date] - [End Date]",
@@ -26,6 +27,7 @@
         ]
       },
       {
+        "title": "前端工程師",
         "company": "[Company Name 2]",
         "position": "[Your Position 2]",
         "date": "[Start Date] - [End Date]",

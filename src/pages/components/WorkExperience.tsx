@@ -2,16 +2,18 @@ import { useTranslation } from "next-i18next";
 
 interface JobProps {
   company: string;
-  title: string;
+  title: string; // 新增的職位標題
+  position: string; // 原本的 title，代表職位
   period: string;
   duties: string[];
 }
 
-const Job: React.FC<JobProps> = ({ company, title, period, duties }) => {
+const Job: React.FC<JobProps> = ({ company, title, position, period, duties }) => {
   return (
     <div>
-      <h3 className="text-xl font-semibold">{`${company} - ${title}`}</h3>
-      <p className="text-sm text-gray-600">{period}</p>
+      <h3 className="text-xl font-semibold">{title}</h3>
+      <p className="text-md text-gray-700">{`${company} - ${position}`}</p>
+      <p className="text-sm text-gray-500 mt-1">{period}</p>
       <ul className="list-disc list-inside mt-2 space-y-1">
         {duties.map((duty, index) => (
           <li key={index}>{duty}</li>
@@ -34,8 +36,9 @@ const WorkExperience = () => {
   const jobs: JobProps[] =
     jobsData.length > 0
       ? jobsData.map((job: any) => ({
+          title: job.title,
           company: job.company,
-          title: job.position,
+          position: job.position,
           period: job.date,
           duties: job.responsibilities,
         }))

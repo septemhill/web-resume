@@ -51,11 +51,6 @@ const PersonalInfo = () => {
       url: "[你的GitHub]",
       icon: <GitHubIcon className="h-6 w-6" />,
     },
-    {
-      label: t("personalInfo.website"),
-      url: "[你的個人網站]",
-      icon: <GlobeIcon className="h-6 w-6" />,
-    },
   ];
 
   return (
