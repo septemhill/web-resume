@@ -86,13 +86,16 @@
       },
       {
         "title": "資深後端工程師",
-        "company": "幣安",
+        "company": "Binance (幣安)",
         "position": "資深後端工程師",
         "date": "2021/11 - 2023/07",
         "responsibilities": [
           "透過將資料分組以減少 45% 的 Redis 指令並引入記憶體內快取機制，將 Redis CPU 使用率從 65% 降低到 30%。",
           "優化程式碼大小 25% - 30% 並提升程式碼品質。同時將程式碼覆蓋率從 72% 提高到 90%。",
-          "使用 truss 和 mockery 代碼生成工具創建服務模板和模擬測試模板。"
+          "使用 truss 和 mockery 代碼生成工具創建服務模板和模擬測試模板。",
+          "開發小程序平台並支援多租戶，設計工作區機制以區分第一方和第三方小程序。",
+          "設計活動任務組件。為滿足不同的任務需求，與 KYC 和推薦團隊合作。",
+          "跨職能團隊協作，包括 DevOps、前端、QA 和其他外部服務的後端團隊。"
         ]
       },
       {
@@ -168,13 +171,13 @@
       {
         "name": "goastutil",
         "techStack": "Go",
-        "description": "一個基於 AST (抽象語法樹) 的 Golang 原始碼生成工具。",
+        "description": "一個基於 AST (抽象語法樹) 的 Golang 原始碼生成工具",
         "githubUrl": "https://github.com/septemhill/goastutil"
       },
       {
         "name": "rh_xqr_dte (AI 驅動)",
         "techStack": "Next.js, TypeScript, Tailwind CSS, Gemini AI",
-        "description": "一個用於追蹤 RoundhillE ETFs 和 YieldMax ETFs 的 0DTE ETF 價格與股息資訊的儀表板。",
+        "description": "一個用於追蹤 Roundhill ETFs 和 YieldMax ETFs 的 0DTE ETF 價格與股息資訊的儀表板。",
         "projectUrl": "https://rh-xqr-dte.pages.dev/",
         "githubUrl": "https://github.com/septemhill/rh_xqr_dte"
       },

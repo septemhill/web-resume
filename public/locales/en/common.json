@@ -93,7 +93,9 @@
           "Reduced Redis CPU utilization from 65% to 30% by grouping data to reduce 45% Redis commands and introducing in-memory cache mechanism.",
           "Optimised code size 25% - 30% and improving the code quality. Also increased code coverage rate from 72% to 90%.",
           "Used truss and mockery codegen tool created services template and mock testing template.",
-          ""
+          "Develop Mini-Program Platform and support Multi-Tenancy and designing Workspace mechanism to separate 1st-Party and 3rd-Party Mini-Programs",
+          "Designing campaign mission component. For fulfilling different mission requirements, collaborated with KYC and Referral teams.",
+          "Cross function team collaboration, includes DevOps, Frontend, QA and other external services Backend teams."
         ]
       },
       {

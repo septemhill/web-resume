@@ -1,7 +1,6 @@
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Toaster } from "react-hot-toast";
-import { useRouter } from "next/router";
 import Education from "./components/Education";
 import PersonalInfo from "./components/PersonalInfo";
 import Projects from "./components/Projects";
@@ -10,21 +9,20 @@ import Skills from "./components/Skills";
 import WorkExperience from "./components/WorkExperience";
 
 export default function Home() {
-  const { t } = useTranslation("common");
-  const router = useRouter();
+  const { t, i18n } = useTranslation("common");
 
   const handleLocaleChange = (locale: string) => {
-    router.push(router.pathname, router.asPath, { locale });
+    i18n.changeLanguage(locale);
   };
 
   return (
     <div className="min-h-screen bg-gray-100 font-sans antialiased">
       <Toaster position="top-left" />
       <div className="container mx-auto flex max-w-4xl justify-end p-4 sm:p-8">
-        <button onClick={() => handleLocaleChange('en')} className={`px-2 py-1 transition-colors ${router.locale === 'en' ? 'font-bold text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}>
+        <button onClick={() => handleLocaleChange('en')} className={`px-2 py-1 transition-colors ${i18n.language === 'en' ? 'font-bold text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}>
           {t('language.switch_to_en')}
         </button>
-        <button onClick={() => handleLocaleChange('zh-TW')} className={`px-2 py-1 transition-colors ${router.locale === 'zh-TW' ? 'font-bold text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}>
+        <button onClick={() => handleLocaleChange('zh-TW')} className={`px-2 py-1 transition-colors ${i18n.language.startsWith('zh') ? 'font-bold text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}>
           {t('language.switch_to_zh-TW')}
         </button>
       </div>
@@ -43,11 +41,24 @@ export default function Home() {
 }
 
 export async function getStaticProps({ locale }: { locale?: string }) {
+  // With `output: 'export'`, we need to manually load all translations
+  // on the initial page load so that the client-side `i18n.changeLanguage`
+  // can work without needing to fetch new data.
+  const currentLocale = locale ?? 'en';
+  const props_en = await serverSideTranslations('en', ['common']);
+  const props_zh = await serverSideTranslations('zh-TW', ['common']);
+
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'en', [
-        'common',
-      ])),
+      // Manually merge the translations from all locales into one props object.
+      _nextI18Next: {
+        initialI18nStore: {
+          ...(props_en._nextI18Next?.initialI18nStore ?? {}),
+          ...(props_zh._nextI18Next?.initialI18nStore ?? {}),
+        },
+        initialLocale: currentLocale,
+        userConfig: props_en._nextI18Next?.userConfig ?? props_zh._nextI18Next?.userConfig ?? null,
+      },
     },
   };
 }
