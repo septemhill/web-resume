@@ -229,5 +229,9 @@
         "degree": "Bachelor of Computer Science "
       }
     ]
+  },
+  "metadata": {
+    "title": "Page of Septem",
+    "description": "The online resume for {{name}}, a {{title}}."
   }
 }

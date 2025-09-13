@@ -1,5 +1,6 @@
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Head from "next/head";
 import { Toaster } from "react-hot-toast";
 import Education from "./components/Education";
 import PersonalInfo from "./components/PersonalInfo";
@@ -10,6 +11,11 @@ import WorkExperience from "./components/WorkExperience";
 
 export default function Home() {
   const { t, i18n } = useTranslation("common");
+  const name = t('personalInfo.name');
+  const title = t('personalInfo.title');
+
+  const pageTitle = t('metadata.title', { name });
+  const pageDescription = t('metadata.description', { name, title });
 
   const handleLocaleChange = (locale: string) => {
     i18n.changeLanguage(locale);
@@ -17,6 +23,14 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-100 font-sans antialiased">
+      <Head>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:type" content="website" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Toaster position="top-left" />
       <div className="container mx-auto flex max-w-4xl justify-end p-4 sm:p-8">
         <button onClick={() => handleLocaleChange('en')} className={`px-2 py-1 transition-colors ${i18n.language === 'en' ? 'font-bold text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}>
