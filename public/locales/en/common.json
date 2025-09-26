@@ -63,7 +63,9 @@
         "date": "Dec 2024 - Present",
         "responsibilities": [
           "Designed and implemented Slack bot commands to automate workflows and deliver real-time service alerts, improving operational efficiency and issue response time.",
-          "Developed and maintained RESTful APIs for seamless interaction with on-chain smart contracts, enabling reliable access to blockchain data and enhancing system integration."
+          "Developed and maintained RESTful APIs for seamless interaction with on-chain smart contracts, enabling reliable access to blockchain data and enhancing system integration.",
+          "Designed and built a comprehensive Aptos chain scanning service to filter and record necessary transactions and events based on specific tokens.",
+          "Implemented robust multi-threading/multi-process support to handle concurrent processing across multiple nodes and diverse block intervals, significantly boosting scanning throughput and data reliability."
         ]
       },
       {
