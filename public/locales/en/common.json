@@ -66,6 +66,14 @@
           "Developed and maintained RESTful APIs for seamless interaction with on-chain smart contracts, enabling reliable access to blockchain data and enhancing system integration.",
           "Designed and built a comprehensive Aptos chain scanning service to filter and record necessary transactions and events based on specific tokens.",
           "Implemented robust multi-threading/multi-process support to handle concurrent processing across multiple nodes and diverse block intervals, significantly boosting scanning throughput and data reliability."
+        ],
+        "techStack": [
+          "Go",
+          "Gin",
+          "Aptos SDK",
+          "PostgreSQL",
+          "RESTful API",
+          "GraphQL"
         ]
       },
       {
@@ -84,6 +92,16 @@
           "Identified and mitigated a critical bottleneck in the REST API, which improved 62% response time.",
           "Migrated message broker system from RabbitMQ to Redpanda.",
           "Developed comprehensive integration and stress testing in Go for the platform."
+        ],
+        "techStack": [
+          "Go",
+          "Gin",
+          "RESTful API",
+          "gRPC",
+          "Docker",
+          "Redpanda",
+          "PostgreSQL",
+          "Testify"
         ]
       },
       {
@@ -98,7 +116,8 @@
           "Develop Mini-Program Platform and support Multi-Tenancy and designing Workspace mechanism to separate 1st-Party and 3rd-Party Mini-Programs",
           "Designing campaign mission component. For fulfilling different mission requirements, collaborated with KYC and Referral teams.",
           "Cross function team collaboration, includes DevOps, Frontend, QA and other external services Backend teams."
-        ]
+        ],
+        "techStack": ["Go", "go-kit", "Redis", "MySQL", "Truss", "Mockery", "RESTful API", "Micro Services", "AWS S3", "AWS DynamoDB"]
       },
       {
         "title": "Senior Backend Developer",
@@ -110,7 +129,8 @@
           "Introduce code quality static checker (golangci-lint). Also introducing Common Vulnerabilities and Exposures checker (nancy) into CI.",
           "Introduce Hashicorp Vault to separate the keys, secrets out of codebase.",
           "Profile the RESTful APIs execution time with ELK and reduce the 20% response time with specified APIs."
-        ]
+        ],
+        "techStack": ["Go", "Gin", "ELK Stack", "Hashicorp Vault", "nancy"]
       },
       {
         "title": "Senior Backend Developer",
@@ -122,7 +142,8 @@
           "Developing several user scenarios for Google MTBF, CUJ (Critical User Journey) testing on different Chromebook models and build log analysis system with EFK. Also using Grafana, Prometheus monitors the target devices CPU, memory and network bandwidth.",
           "Designing a server resource dispatcher which dispatch the server for service contains 1 to 3 Chrome instances that could communicate via CDP (Chrome Devtools Protocol) to build Zoom conferences with a lot of bots. And providing gRPC and RESTful interface for accessing.",
           "Contributing CUJ scenario cases and framework changes to Chromium open source project, includes tast and tast-tests repositories."
-        ]
+        ],
+        "techStack": ["Go", "gRPC", "EFK Stack", "Prometheus", "Grafana", "CDP"]
       },
       {
         "title": "Blockchain Developer",
@@ -134,7 +155,8 @@
           "Transplant DPoS consensus into Elastos, Ethereum.",
           "Collecting transactions into database and implements RESTful APIs for Blockchain Explorer.",
           "Implements auto-transaction generator tool for blockchain pressure testing."
-        ]
+        ],
+        "techStack": ["Go", "Solidity", "Ethereum", "Elastos", "MySQL"]
       },
       {
         "title": "Frontend Developer",
@@ -150,7 +172,8 @@
           "Cross-browser testing / implementation.",
           "Developed UI components.",
           "Refactor existing code, enhancements and improvements overall code quality."
-        ]
+        ],
+        "techStack": ["AngularJS", "jQuery", "ECharts", "i18n"]
       },
       {
         "title": "Senior Firmware Developer",
@@ -163,7 +186,8 @@
           "Debugging and function verification.",
           "Develop BMC with ASPEED AST2300/AST2400/AST2500/PILOT-4 chips. Familiar with AMI code base.",
           "Working with Trac project management."
-        ]
+        ],
+        "techStack": ["C", "Linux Driver", "BMC", "JBOD"]
       }
     ]
   },

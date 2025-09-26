@@ -66,6 +66,14 @@
           "開發並維護 RESTful API，以實現與鏈上智能合約的無縫互動，從而能夠可靠地存取區塊鏈數據並增強系統整合。",
           "設計並開發了一套完整的 Aptos 區塊鏈掃描服務，其核心功能是根據預設的代幣類型 (Token) 來精確篩選並紀錄所需的鏈上交易與事件。",
           "導入了穩健的多執行緒（或多程序）架構，以實現跨多個節點和不同區塊範圍的同步並發處理，從而大幅提升了服務的掃描效率與資料的可靠性。"
+        ],
+        "techStack": [
+          "Go",
+          "Gin",
+          "Aptos SDK",
+          "PostgreSQL",
+          "RESTful API",
+          "GraphQL"
         ]
       },
       {
@@ -84,6 +92,16 @@
           "識別並緩解 REST API 中的一個關鍵瓶頸，使響應時間改善了 62%。",
           "將訊息代理系統從 RabbitMQ 遷移到 Redpanda。",
           "為平台開發了全面的 Go 整合與壓力測試。"
+        ],
+        "techStack": [
+          "Go",
+          "Gin",
+          "RESTful API",
+          "gRPC",
+          "Docker",
+          "Redpanda",
+          "PostgreSQL",
+          "Testify"
         ]
       },
       {
@@ -98,7 +116,8 @@
           "開發小程序平台並支援多租戶，設計工作區機制以區分第一方和第三方小程序。",
           "設計活動任務組件。為滿足不同的任務需求，與 KYC 和推薦團隊合作。",
           "跨職能團隊協作，包括 DevOps、前端、QA 和其他外部服務的後端團隊。"
-        ]
+        ],
+        "techStack": ["Go", "go-kit", "Redis", "MySQL", "Truss", "Mockery", "RESTful API", "Micro Services", "AWS S3", "AWS DynamoDB"]
       },
       {
         "title": "資深後端工程師",
@@ -110,7 +129,8 @@
           "引入程式碼品質靜態檢查器 (golangci-lint)。同時將常見漏洞和披露檢查器 (nancy) 引入 CI。",
           "引入 Hashicorp Vault 將金鑰、密鑰與程式碼庫分離。",
           "使用 ELK 分析 RESTful API 的執行時間，並將指定 API 的響應時間減少 20%。"
-        ]
+        ],
+        "techStack": ["Go", "Gin", "ELK Stack", "Hashicorp Vault", "nancy"]
       },
       {
         "title": "資深後端工程師",
@@ -122,7 +142,8 @@
           "為 Google MTBF、CUJ (關鍵使用者旅程) 測試在不同 Chromebook 型號上開發多種使用者情境，並使用 EFK 建立日誌分析系統。同時使用 Grafana、Prometheus 監控目標裝置的 CPU、記憶體和網路頻寬。",
           "設計一個伺服器資源調度器，為包含 1 到 3 個 Chrome 實例的服務分配伺服器，這些實例可透過 CDP (Chrome 開發者工具協議) 進行通訊，以建立大量機器人參與的 Zoom 會議。並提供 gRPC 和 RESTful 介面供存取。",
           "為 Chromium 開源專案貢獻 CUJ 情境案例和框架變更，包含 tast 和 tast-tests 儲存庫。"
-        ]
+        ],
+        "techStack": ["Go", "gRPC", "EFK Stack", "Prometheus", "Grafana", "CDP"]
       },
       {
         "title": "區塊鏈工程師",
@@ -134,7 +155,8 @@
           "將 DPoS 共識機制移植到 Elastos、以太坊。",
           "將交易收集到資料庫中，並為區塊鏈瀏覽器實現 RESTful API。",
           "實現用於區塊鏈壓力測試的自動交易生成工具。"
-        ]
+        ],
+        "techStack": ["Go", "Solidity", "Ethereum", "Elastos", "MySQL"]
       },
       {
         "title": "前端工程師",
@@ -150,7 +172,8 @@
           "跨瀏覽器測試/實作。",
           "開發 UI 元件。",
           "重構現有程式碼，增強並改善整體程式碼品質。"
-        ]
+        ],
+        "techStack": ["AngularJS", "jQuery", "ECharts", "i18n"]
       },
       {
         "title": "資深韌體工程師",
@@ -163,7 +186,8 @@
           "除錯和功能驗證。",
           "使用 ASPEED AST2300/AST2400/AST2500/PILOT-4 晶片開發 BMC。熟悉 AMI 程式碼庫。",
           "使用 Trac 專案管理工具。"
-        ]
+        ],
+        "techStack": ["C", "Linux Driver", "BMC", "JBOD"]
       }
     ]
   },

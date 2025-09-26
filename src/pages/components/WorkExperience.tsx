@@ -7,26 +7,36 @@ interface JobData {
   position: string;
   date: string;
   responsibilities: string[];
+  techStack?: string[];
 }
 interface JobProps {
   company: string;
-  title: string; // 新增的職位標題
   position: string; // 原本的 title，代表職位
   period: string;
   duties: string[];
+  techStack?: string[];
 }
 
-const Job: React.FC<JobProps> = ({ company, title, position, period, duties }) => {
+const Job: React.FC<JobProps> = ({ company, position, period, duties, techStack }) => {
   return (
     <div>
       <h3 className="text-xl font-semibold">{company}</h3>
-      <p className="text-md text-gray-800">{`${position}`}</p>
+      <p className="text-md text-gray-800">{position}</p>
       <p className="text-sm text-gray-600 mt-1">{period}</p>
       <ul className="list-disc list-outside pl-5 mt-2 space-y-1">
         {duties.map((duty, index) => (
           <li key={index}>{duty}</li>
         ))}
       </ul>
+      {techStack && techStack.length > 0 && (
+        <div className="mt-3 flex flex-wrap gap-2">
+          {techStack.map((tech, index) => (
+            <span key={index} className="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-1 rounded-full">
+              {tech}
+            </span>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
@@ -44,11 +54,11 @@ const WorkExperience = () => {
   const jobs: JobProps[] =
     jobsData.length > 0
       ? jobsData.map((job: JobData) => ({
-          title: job.title,
           company: job.company,
           position: job.position,
           period: job.date,
           duties: job.responsibilities,
+          techStack: job.techStack,
         }))
       : [];
 
